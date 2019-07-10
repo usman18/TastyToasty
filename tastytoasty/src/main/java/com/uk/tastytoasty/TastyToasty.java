@@ -1,6 +1,7 @@
 package com.uk.tastytoasty;
 
 import android.content.Context;
+import android.support.annotation.NonNull;
 import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,7 +10,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class Tasty {
+public class TastyToasty {
 	private Context context;
 	private String message;
 	
@@ -18,15 +19,16 @@ public class Tasty {
 	private Integer backgroundColorId;
 	private Integer textColorId;
 	
-	private View toastLayout;
 	private Boolean showTail;
+	
+	private View toastLayout;
 	
 	
 	public static int LONG = Toast.LENGTH_LONG;
 	public static int SHORT = Toast.LENGTH_SHORT;
 	
 	
-	private Tasty(Builder builder) {
+	private TastyToasty(Builder builder) {
 		this.context = builder.context;
 		this.message = builder.message;
 		this.duration = builder.duration;
@@ -36,6 +38,90 @@ public class Tasty {
 		this.showTail = builder.showTail;
 	}
 	
+	// Instagram Like
+	public static Toast instaLike(@NonNull Context context, String message) {
+		return makeText(context, message, LONG, R.drawable.ic_action_favourite, R.color.pinkish_red, R.color.white, true);
+	}
+	
+	// Instagram Comment
+	public static Toast instaComment(@NonNull Context context, String message) {
+		return makeText(context, message, LONG, R.drawable.ic_comment, R.color.pinkish_red, R.color.white, true);
+	}
+	
+	// Instagram Follower
+	public static Toast instaFollower(@NonNull Context context, String message) {
+		return makeText(context, message, LONG, R.drawable.ic_follower, R.color.pinkish_red, R.color.white, true);
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	public static Toast makeText(@NonNull Context context, String message, Integer duration, Integer iconId, Integer backgroundColorId, Integer textColorId, Boolean showTail) {
+		
+		View toastLayout = LayoutInflater.from(context)
+			.inflate(R.layout.toast_layout, null);
+		
+		Toast toast = new Toast(context);
+		toast.setView(toastLayout);
+		
+		LinearLayout toastContainer  = toastLayout.findViewById(R.id.toastContainer);
+		TextView tvMessage = toastLayout.findViewById(R.id.tvToastMsg);
+		ImageView imgTail = toastLayout.findViewById(R.id.imgTail);
+		ImageView imgIcon = toastLayout.findViewById(R.id.imgIcon);
+		
+		
+		if (message != null) {
+			tvMessage.setText(message);
+		} else {
+			tvMessage.setVisibility(View.GONE);
+		}
+		
+		
+		if (iconId != null) {
+			imgIcon.setImageResource(iconId);
+		} else {
+			imgIcon.setVisibility(View.GONE);
+		}
+		
+		
+		if (backgroundColorId != null) {
+			toastContainer.setBackgroundColor(context.getResources().getColor(backgroundColorId));
+			imgTail.setColorFilter(ContextCompat.getColor(context, backgroundColorId), android.graphics.PorterDuff.Mode.SRC_IN);
+		} else {
+			//Default
+			toastContainer.setBackgroundColor(context.getResources().getColor(R.color.pinkish_red));
+			imgTail.setColorFilter(ContextCompat.getColor(context, R.color.pinkish_red), android.graphics.PorterDuff.Mode.SRC_IN);
+		}
+		
+		
+		if (textColorId != null) {
+			tvMessage.setTextColor(context.getResources().getColor(textColorId));
+		} else {
+			tvMessage.setTextColor(context.getResources().getColor(R.color.white));
+		}
+		
+		
+		
+		if (showTail == null || !showTail) {
+			imgTail.setVisibility(View.GONE);
+		} else {
+			imgTail.setVisibility(View.VISIBLE);
+		}
+		
+		
+		//Don't need to worry, always non-null
+		toast.setDuration(duration);
+		
+		return toast;
+	}
+	
+	
+	
+	
 	
 	private void show() {
 		
@@ -44,10 +130,13 @@ public class Tasty {
 		toast.show();
 	}
 	
+	
+	
 	private void inflateToastLayout() {
 		toastLayout = LayoutInflater.from(context)
 			.inflate(R.layout.toast_layout, null);
 	}
+	
 	
 	private Toast configureToast() {
 		Toast toast = new Toast(context);
@@ -117,12 +206,12 @@ public class Tasty {
 		
 		private Boolean showTail;
 		
-		private Tasty mToast;
+		private TastyToasty mToast;
 		
 		public Builder() {
 		}
 		
-		public Builder(Context context) {
+		public Builder(@NonNull Context context) {
 			this.context = context;
 		}
 		
@@ -166,7 +255,7 @@ public class Tasty {
 		
 		
 		public void show() {
-			mToast = new Tasty(this);
+			mToast = new TastyToasty(this);
 			mToast.show();
 		}
 		
