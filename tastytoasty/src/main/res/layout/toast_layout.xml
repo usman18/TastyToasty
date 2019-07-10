@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        
+        <android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:cardElevation="0dp"
+                app:cardCornerRadius="12dp">
+                
+                
+                <LinearLayout
+                        android:id="@+id/toastContainer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@color/pinkish_red"
+                        android:orientation="horizontal"
+                        android:gravity="center"
+                        android:padding="12dp">
+                        
+                        <ImageView
+                                android:id="@+id/imgIcon"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center" />
+                        
+                        
+                        <TextView
+                                android:id="@+id/tvToastMsg"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="4dp"
+                                android:layout_marginEnd="4dp"
+                                android:textSize="15sp"
+                                android:textAlignment="center"
+                                android:textColor="@color/white" />
+        
+        
+
+                </LinearLayout>
+        
+        </android.support.v7.widget.CardView>
+        
+        <ImageView
+                android:id="@+id/imgTail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_arrow_drop_down"
+                android:layout_marginTop="-18dp"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                />
+        
+</LinearLayout>
