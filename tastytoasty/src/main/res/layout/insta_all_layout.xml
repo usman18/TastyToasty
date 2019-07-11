@@ -22,14 +22,52 @@
                         android:padding="12dp">
                         
                         <ImageView
-                                android:id="@+id/imgIcon"
+                                android:id="@+id/imgLike"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center" />
                         
                         
                         <TextView
-                                android:id="@+id/tvToastMsg"
+                                android:id="@+id/tvLikeMsg"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="4dp"
+                                android:layout_marginEnd="8dp"
+                                android:textSize="15sp"
+                                android:textAlignment="center"
+                                android:textColor="@color/white" />
+        
+        
+                        <ImageView
+                                android:id="@+id/imgFollower"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center" />
+        
+        
+                        <TextView
+                                android:id="@+id/tvFollowMsg"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginStart="4dp"
+                                android:layout_marginEnd="8dp"
+                                android:textSize="15sp"
+                                android:textAlignment="center"
+                                android:textColor="@color/white" />
+                        
+                        
+                        <ImageView
+                                android:id="@+id/imgComment"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center" />
+        
+        
+                        <TextView
+                                android:id="@+id/tvCommentMsg"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_gravity="center"
@@ -38,8 +76,7 @@
                                 android:textSize="15sp"
                                 android:textAlignment="center"
                                 android:textColor="@color/white" />
-        
-        
+
 
                 </LinearLayout>
         
@@ -54,5 +91,5 @@
                 android:layout_gravity="center"
                 android:visibility="gone"
                 />
-        
+
 </LinearLayout>

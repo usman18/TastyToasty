@@ -43,18 +43,57 @@ public class TastyToasty {
 	
 	// Instagram Like
 	public static Toast instaLike(@NonNull Context context, String message) {
-		return makeText(context, message, LONG, R.drawable.ic_action_favourite, R.color.pinkish_red, R.color.white, true);
+		return makeText(context, message, LONG, R.drawable.ic_action_favourite, R.color.insta_red, R.color.white, true);
 	}
 	
 	// Instagram Comment
 	public static Toast instaComment(@NonNull Context context, String message) {
-		return makeText(context, message, LONG, R.drawable.ic_comment, R.color.pinkish_red, R.color.white, true);
+		return makeText(context, message, LONG, R.drawable.ic_comment, R.color.insta_red, R.color.white, true);
 	}
 	
 	// Instagram Follower
 	public static Toast instaFollower(@NonNull Context context, String message) {
-		return makeText(context, message, LONG, R.drawable.ic_follower, R.color.pinkish_red, R.color.white, true);
+		return makeText(context, message, LONG, R.drawable.ic_follower, R.color.insta_red, R.color.white, true);
 	}
+	
+	public static Toast instaAll(@NonNull Context context, String likeMessage, String followerMessage, String commentMessage) {
+		
+		View view = LayoutInflater.from(context)
+			.inflate(R.layout.insta_all_layout, null);
+		
+		LinearLayout toastContainer = view.findViewById(R.id.toastContainer);
+	
+		ImageView imgLike = view.findViewById(R.id.imgLike);
+		ImageView imgFollower = view.findViewById(R.id.imgFollower);
+		ImageView imgComment = view.findViewById(R.id.imgComment);
+		
+		ImageView imgTail = view.findViewById(R.id.imgTail);
+		
+		TextView tvLike = view.findViewById(R.id.tvLikeMsg);
+		TextView tvFollower = view.findViewById(R.id.tvFollowMsg);
+		TextView tvComment = view.findViewById(R.id.tvCommentMsg);
+		
+		Toast toast = new Toast(context);
+		toast.setView(view);
+		
+		toastContainer.setBackgroundColor(context.getResources().getColor(R.color.insta_red));
+		
+		imgLike.setImageResource(R.drawable.ic_action_favourite);
+		imgFollower.setImageResource(R.drawable.ic_follower);
+		imgComment.setImageResource(R.drawable.ic_comment);
+		
+		tvLike.setText(likeMessage);
+		tvFollower.setText(followerMessage);
+		tvComment.setText(commentMessage);
+		
+		imgTail.setVisibility(View.VISIBLE);
+		
+		toast.setDuration(Toast.LENGTH_LONG);
+		
+		return toast;
+	}
+	
+	
 	
 	
 	public static Toast star(@NonNull Context context, String message) {
@@ -152,8 +191,8 @@ public class TastyToasty {
 			imgTail.setColorFilter(ContextCompat.getColor(context, backgroundColorId), android.graphics.PorterDuff.Mode.SRC_IN);
 		} else {
 			//Default
-			toastContainer.setBackgroundColor(context.getResources().getColor(R.color.pinkish_red));
-			imgTail.setColorFilter(ContextCompat.getColor(context, R.color.pinkish_red), android.graphics.PorterDuff.Mode.SRC_IN);
+			toastContainer.setBackgroundColor(context.getResources().getColor(R.color.insta_red));
+			imgTail.setColorFilter(ContextCompat.getColor(context, R.color.insta_red), android.graphics.PorterDuff.Mode.SRC_IN);
 		}
 		
 		
@@ -225,8 +264,8 @@ public class TastyToasty {
 			imgTail.setColorFilter(ContextCompat.getColor(context, backgroundColorId), android.graphics.PorterDuff.Mode.SRC_IN);
 		} else {//Default
 			
-			toastContainer.setBackgroundColor(context.getResources().getColor(R.color.pinkish_red));
-			imgTail.setColorFilter(ContextCompat.getColor(context, R.color.pinkish_red), android.graphics.PorterDuff.Mode.SRC_IN);
+			toastContainer.setBackgroundColor(context.getResources().getColor(R.color.insta_red));
+			imgTail.setColorFilter(ContextCompat.getColor(context, R.color.insta_red), android.graphics.PorterDuff.Mode.SRC_IN);
 		}
 		
 		
