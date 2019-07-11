@@ -59,10 +59,9 @@ TastyToasty.violet(MainActivity.this, "Its lit", R.drawable.ic_whatshot).show();
 
 <b>Similarly the rest of <i>VIBGYOR</i> can be used</b> <br><br>
 
-<div align="center"><img height="95" width="290" src="https://github.com/usman18/TastyToasty/blob/master/Screenshots/vibgyor/indigo.JPG"/><img height="95" width="290" src="https://github.com/usman18/TastyToasty/blob/master/Screenshots/vibgyor/blue.JPG"/></div>
-<div>
-<img height="95" width="290" src="https://github.com/usman18/TastyToasty/blob/master/Screenshots/vibgyor/Green.JPG"/><img height="95" width="290" src="https://github.com/usman18/TastyToasty/blob/master/Screenshots/vibgyor/yellow.JPG"/></div>
-<div><img height="95" width="290" src="https://github.com/usman18/TastyToasty/blob/master/Screenshots/vibgyor/orange.JPG"/><img height="95" width="290" src="https://github.com/usman18/TastyToasty/blob/master/Screenshots/vibgyor/red.JPG"/></div>
+<img height="95" width="290" src="https://github.com/usman18/TastyToasty/blob/master/Screenshots/vibgyor/indigo.JPG"/><img height="95" width="290" src="https://github.com/usman18/TastyToasty/blob/master/Screenshots/vibgyor/blue.JPG"/>
+<img height="95" width="290" src="https://github.com/usman18/TastyToasty/blob/master/Screenshots/vibgyor/Green.JPG"/><img height="95" width="290" src="https://github.com/usman18/TastyToasty/blob/master/Screenshots/vibgyor/yellow.JPG"/>
+<img height="95" width="290" src="https://github.com/usman18/TastyToasty/blob/master/Screenshots/vibgyor/orange.JPG"/><img height="95" width="290" src="https://github.com/usman18/TastyToasty/blob/master/Screenshots/vibgyor/red.JPG"/>
 
 <br>
 
@@ -128,6 +127,7 @@ new TastyToasty.Builder(MainActivity.this)
 <br>
 
 <h3>Note:</h3>
+<br>
 Using builder method you can create customized Toasts pretty easily. Only call the methods for attributes which you would like to have in your Toast. 
 For example, if you want a  Toast  with just icon, just call that method (make sure you always pass the context though) and ignore the rest of the attribute setting methods. Below is an example of the same.
 
