@@ -11,6 +11,8 @@ public class MainActivity extends AppCompatActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		
+		
 		/*
 		TastyToasty.makeText(MainActivity.this, "This is a custom toast"
 			,TastyToasty.LONG, R.drawable.ic_action_favourite, R.color.violet, R.color.white, true)
