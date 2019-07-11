@@ -11,10 +11,15 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class TastyToasty {
+	
+	public static int LONG = Toast.LENGTH_LONG;
+	public static int SHORT = Toast.LENGTH_SHORT;
+
+
 	private Context context;
 	private String message;
 	
-	private Integer duration;
+	private Integer duration = LONG;
 	private Integer iconId;
 	private Integer backgroundColorId;
 	private Integer textColorId;
@@ -24,8 +29,6 @@ public class TastyToasty {
 	private View toastLayout;
 	
 	
-	public static int LONG = Toast.LENGTH_LONG;
-	public static int SHORT = Toast.LENGTH_SHORT;
 	
 	
 	private TastyToasty(Builder builder) {
@@ -54,9 +57,23 @@ public class TastyToasty {
 	}
 	
 	
+	public static Toast star(@NonNull Context context, String message) {
+		return makeText(context, message, LONG, R.drawable.ic_star, R.color.blue, R.color.white, false);
+	}
+	
+	public static Toast success(@NonNull Context context, String message) {
+		return makeText(context, message, LONG, R.drawable.ic_verified_user, R.color.green, R.color.white, false);
+	}
 	
 	
+	public static Toast error(@NonNull Context context, String message) {
+		return makeText(context, message, LONG, R.drawable.ic_error, R.color.red, R.color.white, false);
+	}
 	
+	
+	public static Toast trending(@NonNull Context context, String message) {
+		return makeText(context, message, LONG, R.drawable.ic_whatshot, R.color.orange, R.color.white, false);
+	}
 	
 	
 	
@@ -79,6 +96,14 @@ public class TastyToasty {
 		} else {
 			tvMessage.setVisibility(View.GONE);
 		}
+		
+		
+		if (duration != null) {
+			toast.setDuration(duration);
+		} else {
+			toast.setDuration(Toast.LENGTH_LONG);
+		}
+		
 		
 		
 		if (iconId != null) {
@@ -113,8 +138,6 @@ public class TastyToasty {
 		}
 		
 		
-		//Don't need to worry, always non-null
-		toast.setDuration(duration);
 		
 		return toast;
 	}
