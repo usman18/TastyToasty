@@ -3,6 +3,30 @@
 
 An easy-to-use library to create tasty  😋 Toasts with a bunch of flavours 🌈 It also provides effortless methods to create Instagram like Toasts 💓
 
+# Installation
+
+Add this in your root `build.gradle` file (**not** your module `build.gradle` file):
+
+```gradle
+allprojects {
+	repositories {
+		...
+		maven { url "https://jitpack.io" }
+	}
+}
+```
+
+Add this to your module's `build.gradle` file :
+
+```gradle
+dependencies {
+	...
+    implementation 'com.github.usman18:TastyToasty:v1.0'
+}
+```
+
+
+
 # Usage
  
 ## Instagram Toasts
@@ -113,7 +137,7 @@ TastyToasty.makeText(MainActivity.this, "This is a custom toast",TastyToasty.LON
 <img src="https://github.com/usman18/TastyToasty/blob/master/Screenshots/Custom/builder.JPG" />
 </div>
 
-
+<br>
 
 ``` java
 new TastyToasty.Builder(MainActivity.this)
