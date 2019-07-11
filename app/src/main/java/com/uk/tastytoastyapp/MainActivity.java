@@ -12,7 +12,8 @@ public class MainActivity extends AppCompatActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
-		
+		TastyToasty.yellow(MainActivity.this, "This is awesome!", R.drawable.ic_whatshot)
+			.show();
 		
 		
 	}

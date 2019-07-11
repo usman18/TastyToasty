@@ -76,6 +76,40 @@ public class TastyToasty {
 	}
 	
 	
+	/*
+	*  Spectrum starts here
+	*/
+	public static Toast red(@NonNull Context context, String message, Integer iconId) {
+		return makeText(context, message, LONG, iconId, R.color.red, R.color.white, false);
+	}
+	
+	public static Toast orange(@NonNull Context context, String message, Integer iconId) {
+		return makeText(context, message, LONG, iconId, R.color.orange, R.color.white, false);
+	}
+	
+	public static Toast yellow(@NonNull Context context, String message, Integer iconId) {
+		return makeText(context, message, LONG, iconId, R.color.yellow, R.color.white, false);
+	}
+	
+	public static Toast green(@NonNull Context context, String message, Integer iconId) {
+		return makeText(context, message, LONG, iconId, R.color.green, R.color.white, false);
+	}
+	
+	public static Toast blue(@NonNull Context context, String message, Integer iconId) {
+		return makeText(context, message, LONG, iconId, R.color.blue, R.color.white, false);
+	}
+	
+	public static Toast indigo(@NonNull Context context, String message, Integer iconId) {
+		return makeText(context, message, LONG, iconId, R.color.indigo, R.color.white, false);
+	}
+	
+	
+	public static Toast violet(@NonNull Context context, String message, Integer iconId) {
+		return makeText(context, message, LONG, iconId, R.color.violet, R.color.white, false);
+	}
+	
+	
+	
 	
 	public static Toast makeText(@NonNull Context context, String message, Integer duration, Integer iconId, Integer backgroundColorId, Integer textColorId, Boolean showTail) {
 		
