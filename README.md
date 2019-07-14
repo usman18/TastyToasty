@@ -150,11 +150,11 @@ new TastyToasty.Builder(MainActivity.this)
 <br>
 
 <h3>Note:</h3>
-<br>
+
 Using builder method you can create customized Toasts pretty easily. Only call the methods for attributes which you would like to have in your Toast. 
 For example, if you want a  Toast  with just icon, just call that method (make sure you always pass the context though) and ignore the rest of the attribute setting methods. Below is an example of the same.
 
-<br>
+<br><br>
 
 ``` java
 //Default text color is white and default background color is pinkinsh red
