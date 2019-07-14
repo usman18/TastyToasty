@@ -1,6 +1,5 @@
 # TastyToasty
-[![API](https://img.shields.io/badge/API-19%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=19)
-
+[![API](https://img.shields.io/badge/API-19%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=19)     [![](https://jitpack.io/v/usman18/TastyToasty.svg)](https://jitpack.io/#usman18/TastyToasty)<br>
 An easy-to-use library to create tasty  😋 Toasts with a bunch of flavours 🌈 It also provides effortless methods to create Instagram like Toasts 💓
 
 # Installation
