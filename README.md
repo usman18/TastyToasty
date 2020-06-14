@@ -20,7 +20,7 @@ Add this to your module's `build.gradle` file :
 ```gradle
 dependencies {
 	...
-    implementation 'com.github.usman18:TastyToasty:v1.1'
+    implementation 'com.github.usman18:TastyToasty:v1.2'
 }
 ```
 
