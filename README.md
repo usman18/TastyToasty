@@ -2,6 +2,9 @@
 [![API](https://img.shields.io/badge/API-19%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=19)     [![](https://jitpack.io/v/usman18/TastyToasty.svg)](https://jitpack.io/#usman18/TastyToasty)<br>
 An easy-to-use library to create tasty  😋 Toasts with a bunch of flavours 🌈 It also provides effortless methods to create Instagram like Toasts 💓
 
+# Article
+ - [Medium](https://medium.com/better-programming/give-life-to-your-toasts-on-android-using-tastytoasty-45d0d673129e?source=friends_link&sk=63796a885bedc2f1824c470110701df5)
+
 # Installation
 
 Add this in your root `build.gradle` file (**not** your module `build.gradle` file):
