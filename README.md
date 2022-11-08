@@ -171,6 +171,11 @@ new TastyToasty.Builder(MainActivity.this)
 <img src="https://github.com/usman18/TastyToasty/blob/master/Screenshots/Custom/trending_custom.JPG" />
 </div>
 
+<br>
+
+## Like my work ? You can tip me [here]( https://www.paypal.com/paypalme/usmankhan18)
+
+
 ## Contributions
 Contributions are always welcome. Please fork this repository and contribute using pull requests. The pull requests will be thoroughly assessed and if found significant will be accepted.
 
